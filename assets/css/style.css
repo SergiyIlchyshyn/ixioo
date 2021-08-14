@@ -1,0 +1,71 @@
+:root {
+    --bg-sidebar: #f9f9f9;
+    --bg-light: #ffffff;
+    /* Text color */
+    --accent: #0a84ff;
+    --text-primary: #000000;
+    --text-secondary: #84858a;
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background-color: var(--bg-light);
+}
+/* ----- Header ----- */
+.app-header {
+    height: 77px;
+    padding: 0 96px 0 120px;
+    background-color: var(--bg-sidebar);
+    z-index: 1039;
+}
+.app-header__logo a svg {
+    fill: var(--accent);
+}
+.app-header__menu .nav-link {
+    padding: 0.5rem 3rem;
+    color: var(--text-secondary);
+}
+.app-header .nav-item:last-child .nav-link {
+    padding-right: 0;
+}
+/* ----- Main content ----- */
+.app-content {
+    /* padding-top: 77px; */
+    flex: 1;
+    position: relative;
+}
+/* ----- Sidebar ----- */
+.app-main__sidebar {
+    width: 325px;
+    height: 100vh;
+    padding: 6px 24px 24px;
+    background-color: var(--bg-sidebar);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1038;
+}
+.app-main__sidebar .nav-sidebar .nav-link {
+    color: var(--text-primary);
+}
+.app-main__sidebar .nav-sidebar .nav-link.active {
+    color: var(--accent);
+}
+/* ----- Main content ----- */
+.app-main {
+    flex: 1;
+    padding-left: 325px;
+}
+.app-main__content {
+    flex: 1;
+}
+
+/* ----- Footer ----- */
+.app-footer {
+    background-color: var(--bg-sidebar);
+}

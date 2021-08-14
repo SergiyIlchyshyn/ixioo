@@ -1,123 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IXIOO Dashboard</title>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>IXIOO - Dashboard</title>
+        <!-- Bootstrap core CSS -->
+        <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Main CSS -->
+        <link href="assets/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="app-container">
+            <header class="d-flex justify-content-between align-items-center app-header"> 
+                    <div class="app-header__logo">
+                        <a href="#">
+                            <svg width="93" height="30" viewBox="0 0 93 30" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.23867 7.67706V22.6204L0.678626 30H0V0H0.763454L7.23867 7.67706Z" />
+                                <path d="M11.1973 3.45156e-06H2.27622L15.7356 15.0424L2.20553 30H11.2963L19.6801 21.1781L28.064 30H37.1548L23.6247 15.0424L37.0841 3.45156e-06H28.163L19.6801 8.93497L11.1973 3.45156e-06Z" />
+                                <path d="M32.1216 22.6204V7.67706L38.5968 0H39.3603V30H38.6817L32.1216 22.6204Z" />
+                                <path d="M93 14.9859C93 20.6229 89.8876 25.533 85.2874 28.0914C86.2332 27.2146 87.0157 26.1753 87.5974 25.0217C88.2406 23.7459 88.6254 22.3555 88.7295 20.9305C88.8336 19.5055 88.6551 18.074 88.2041 16.7182C87.7531 15.3624 87.0386 14.1091 86.1016 13.0304C85.1646 11.9517 84.0237 11.0688 82.7444 10.4324C81.465 9.79611 80.0726 9.41889 78.647 9.32249L78.6464 9.33091C78.4433 9.30889 78.2369 9.2976 78.0279 9.2976C74.9395 9.2976 72.4274 11.7648 72.3552 14.8358C72.3554 14.8566 72.3556 14.8774 72.3557 14.8982C72.3559 14.9275 72.3559 14.9567 72.3559 14.986V15.0019C72.3559 15.0131 72.3559 15.0244 72.3559 15.0356C72.3558 15.0476 72.3558 15.0597 72.3557 15.0717C72.3556 15.0863 72.3555 15.1009 72.3554 15.1154C72.3582 15.2277 72.3642 15.3391 72.3735 15.4496C72.3064 17.4933 71.8217 19.5024 70.9484 21.353C70.3156 22.694 69.4888 23.9305 68.4973 25.024C65.7546 28.0623 61.7851 29.9718 57.3696 29.9718C49.0929 29.9718 42.3833 23.2624 42.3833 14.986C42.3833 9.34897 45.4958 4.43891 50.0959 1.88046C49.1501 2.75729 48.3676 3.79662 47.786 4.95016C47.1427 6.22599 46.7579 7.61638 46.6538 9.04139C46.5497 10.4664 46.7283 11.8979 47.1792 13.2537C47.6302 14.6095 48.3447 15.8628 49.2817 16.9415C50.2187 18.0202 51.3596 18.9031 52.6389 19.5395C53.9183 20.1758 55.3108 20.553 56.7364 20.6494L56.7369 20.641C56.9401 20.663 57.1464 20.6743 57.3554 20.6743C60.4438 20.6743 62.9559 18.207 63.0281 15.1361C63.0276 15.0861 63.0274 15.0361 63.0274 14.9859C63.0274 14.9427 63.0275 14.8995 63.0279 14.8564C63.0251 14.7442 63.0191 14.6328 63.0099 14.5223C63.077 12.4786 63.5617 10.4695 64.4349 8.61891C65.0676 7.27819 65.8941 6.04197 66.8853 4.94874C69.628 1.90996 73.5978 8.45633e-05 78.0137 8.45633e-05C86.2904 8.54262e-05 93 6.70948 93 14.9859Z" />
+                                <path d="M83.7022 14.9717C83.7022 13.6071 83.2205 12.355 82.4178 11.3762C83.5341 11.9497 84.531 12.7313 85.3544 13.6794C86.2059 14.6596 86.8552 15.7985 87.265 17.0305C87.6748 18.2626 87.8371 19.5634 87.7425 20.8584C87.6479 22.1533 87.2982 23.4168 86.7137 24.5762C86.1291 25.7356 85.3212 26.768 84.3363 27.6141C83.3514 28.4602 82.209 29.1033 80.9747 29.5064C80.2842 29.732 79.5725 29.8799 78.8528 29.9487C78.575 29.964 78.2953 29.9718 78.0137 29.9718C74.3695 29.9718 71.0292 28.6712 68.4315 26.5088C69.848 25.1555 71.0053 23.5514 71.8434 21.7753C72.4397 20.5118 72.866 19.1789 73.1143 17.8114C74.0957 19.506 75.9287 20.6458 78.0279 20.6458C81.1617 20.6458 83.7022 18.1054 83.7022 14.9717Z" />
+                                <path d="M52.9655 18.5957C52.1628 17.6168 51.6811 16.3648 51.6811 15.0002C51.6811 11.8664 54.2216 9.32606 57.3554 9.32606C59.4546 9.32606 61.2876 10.4659 62.2691 12.1605C62.5173 10.793 62.9436 9.46011 63.5399 8.19659C64.378 6.4205 65.5353 4.81642 66.9518 3.46313C64.3541 1.30074 61.0138 8.93092e-05 57.3696 8.93092e-05C57.088 8.93092e-05 56.8083 0.00785533 56.5305 0.0231846C55.8108 0.0919656 55.0992 0.239909 54.4086 0.465452C53.1744 0.86859 52.0319 1.51169 51.047 2.3578C50.0622 3.2039 49.2542 4.23632 48.6697 5.3957C48.0851 6.55507 47.7355 7.81855 47.6409 9.1135C47.5462 10.4085 47.7085 11.7093 48.1183 12.9414C48.5281 14.1734 49.1774 15.3123 50.0289 16.2925C50.8524 17.2406 51.8492 18.0222 52.9655 18.5957Z" />
+                            </svg>
+                        </a>
+                    </div>                  
+                    <div class="app-header__menu">      
+                        <ul class="nav">
+                            <li class="nav-item">
+                                <a class="nav-link" class="active" href="javascript:void(0)">Marketplace</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">IXIOO Management</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">DOC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">Forum</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="services.html">Support</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">FAQ</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">My IXIOO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="javascript:void(0)">LogOut</a>
+                            </li>
+                        </ul>              
+                    </div>       
+            </header>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Main CSS -->
-<link href="assets/css/style.css" rel="stylesheet">
-</head>
-<body>
-    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
-        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Company name</a>
-        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
-        <div class="navbar-nav">
-            <div class="nav-item text-nowrap">
-                <a class="nav-link px-3" href="#">Sign out</a>
+            <div class="d-flex app-content">
+                <div class="app-main__sidebar">
+                    <nav class="nav-sidebar">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#">Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Admin panel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My messages</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">My machines</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Consulting</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Marketplace</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Support</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="d-flex flex-column app-main">
+                    <main class="app-main__content">
+                        main content
+                    </main>
+                    <footer class="app-footer">
+                        footer page
+                    </footer>
+                </div>
             </div>
         </div>
-    </header>
-    <div class="container-fluid">
-        <div class="row">
-            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
-                <div class="position-sticky pt-3">
-                <ul class="nav flex-column">
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">
-                        <span data-feather="home"></span>
-                        Dashboard
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="file"></span>
-                        Orders
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="shopping-cart"></span>
-                        Products
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="users"></span>
-                        Customers
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="bar-chart-2"></span>
-                        Reports
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="layers"></span>
-                        Integrations
-                    </a>
-                    </li>
-                </ul>
         
-                <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-                    <span>Saved reports</span>
-                    <a class="link-secondary" href="#" aria-label="Add a new report">
-                    <span data-feather="plus-circle"></span>
-                    </a>
-                </h6>
-                <ul class="nav flex-column mb-2">
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="file-text"></span>
-                        Current month
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="file-text"></span>
-                        Last quarter
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="file-text"></span>
-                        Social engagement
-                    </a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <span data-feather="file-text"></span>
-                        Year-end sale
-                    </a>
-                    </li>
-                </ul>
-                </div>
-            </nav>
-
-            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-                    <h1 class="h2">Dashboard</h1>
-                    <div class="btn-toolbar mb-2 mb-md-0">
-                        <div class="btn-group me-2">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-                        </div>
-                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
-                        <span data-feather="calendar"></span>
-                        This week
-                        </button>
-                    </div>
-                </div>
-            </main>
-        </div>
-    </div>
-</body>
+        <script src="assets/js/chart.min.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
