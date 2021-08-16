@@ -1,10 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
 :root {
     --bg-sidebar: #f9f9f9;
     --bg-light: #ffffff;
-    /* Text color */
+    --bg-gray: #efeff4;
+    /*===== Text color =====*/
     --accent: #0a84ff;
     --text-primary: #000000;
     --text-secondary: #84858a;
+    /*===== Font =====*/
+    --Roboto: "Roboto", sans-serif;
+    /*===== Font weight =====*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-black: 900;
+}
+
+body {
+    font-family: var(--Roboto);
 }
 
 .app-container {
@@ -40,7 +54,7 @@
 /* ----- Sidebar ----- */
 .app-main__sidebar {
     width: 325px;
-    height: 100vh;
+    height: calc(100vh - 77px);
     padding: 6px 24px 24px;
     background-color: var(--bg-sidebar);
 
@@ -50,11 +64,24 @@
     left: 0;
     z-index: 1038;
 }
+.app-main__content ol,
+.app-main__content ul {
+    margin: 0;
+}
+.app-main__sidebar .nav-sidebar .nav-item {
+    padding-bottom: 3px;
+}
 .app-main__sidebar .nav-sidebar .nav-link {
+    padding: 0.5625rem 0.84375rem;
     color: var(--text-primary);
+    font-weight: var(--font-medium);
+    line-height: 1.3125;
+    letter-spacing: -0.32px;
 }
 .app-main__sidebar .nav-sidebar .nav-link.active {
     color: var(--accent);
+    background-color: var(--bg-gray);
+    border-radius: 12px;
 }
 /* ----- Main content ----- */
 .app-main {
