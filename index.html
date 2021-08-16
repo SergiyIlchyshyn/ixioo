@@ -91,30 +91,62 @@
                 <div class="d-flex flex-column app-main">
                     <main class="app-main__content">
                         <div class="container-fluid">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div >
+                            <div class="d-flex align-items-center justify-content-between content-header">
+                                <div class="content-header__nav">
                                     <nav style="--bs-breadcrumb-divider: '|';" aria-label="breadcrumb">
-                                        <ol class="breadcrumb">
+                                        <ol class="breadcrumb m-0">
                                             <li class="breadcrumb-item"><a href="#">Machines</a></li>
                                             <li class="breadcrumb-item active" aria-current="page">Machine name</li>
                                         </ol>
                                     </nav>
                                 </div>
-                                <div><h1>Training report</h1></div>
-                                <div>
+                                <div class="content-header__title">
+                                    <h1 class="m-0">Training report</h1>
+                                </div>
+                                <div class="content-header__switch">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M23.4965 12C23.4965 18.3561 18.3979 23.5 12.1193 23.5C5.84075 23.5 0.742188 18.3561 0.742188 12C0.742188 5.64386 5.84075 0.5 12.1193 0.5C18.3979 0.5 23.4965 5.64386 23.4965 12Z" fill="#EFEFF4" stroke="#0A84FF"/>
                                         <path d="M17.0491 12.895C16.9713 13.7461 16.6551 14.5572 16.1377 15.2334C15.6202 15.9096 14.9229 16.4229 14.1272 16.7133C13.3315 17.0036 12.4705 17.0591 11.6448 16.873C10.8191 16.687 10.0629 16.2673 9.46468 15.6629C8.86649 15.0585 8.45103 14.2945 8.26691 13.4602C8.0828 12.626 8.13765 11.756 8.42505 10.9521C8.71245 10.1483 9.22051 9.44368 9.88978 8.92088C10.5591 8.39807 11.3618 8.07865 12.2042 8C11.711 8.67413 11.4737 9.50472 11.5354 10.3407C11.5971 11.1767 11.9538 11.9625 12.5405 12.5553C13.1272 13.1481 13.905 13.5084 14.7324 13.5707C15.5598 13.6331 16.3819 13.3933 17.0491 12.895V12.895Z" stroke="#0A84FF" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                        
+                                    </svg>
                                 </div>
                             </div>
-                            <div class="row flex-row">
-                                <div class="col-md-6">column 1</div>
-                                <div class="col-md-6">column 2</div>
+                            <div class="row m-0">
+                                <div class="d-flex align-items-center justify-content-end training-price">
+                                    <div class="training-price__info">
+                                        <p>Training price</p>
+                                        <p>17$</p>
+                                    </div>
+                                    <div class="training-price__btn">
+                                        <button type="button" class="btn btn-primary">Retraine machine</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row m-0 flex-row training-data">
+                                <div class="col-md-6 training-data__col">
+                                    <div class="card">
+                                        <div class="training-data__title">
+                                            <h3>Accuracy</h3>
+                                        </div>
+                                        <div class="training-data__grid">
+                                            grid
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 training-data__col">
+                                    <div class="card">
+                                        <div class="training-data__title">
+                                            <h3>Loss</h3>
+                                        </div>
+                                        <div class="training-data__grid">
+                                            grid
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="row">
-                                <h4>columns</h4>
+                                <div class="training-data__col">
+                                    <h2>Columns</h2>
+                                </div>
                             </div>
                         </div>
                     </main>
