@@ -181,6 +181,44 @@ body {
     line-height: 1.2;
     letter-spacing: 0.38px;
 }
+.training-data__grid ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 37px;
+    row-gap: 24px;
+}
+.training-data__grid ul li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px 12px 12px;
+    background-color: #f4f4f5;
+    border: 1px solid #e5e5eb;
+    border-radius: 8px;
+}
+.training-data__grid ul li:nth-child(even) {
+    background-color: rgba(116, 116, 128, 0.08);
+}
+.training-data__grid ul li p {
+    margin: 0;
+    font-weight: var(--font-black);
+    line-height: 1;
+    letter-spacing: 0.066px;
+}
+.training-data__grid p.training-data__digits {
+    margin-bottom: 12px;
+    background: linear-gradient(#0a84ff, #4fbaf0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.25rem;
+}
+.training-data__grid p.training-data__info {
+    color: var(--accent);
+    font-size: 0.6875rem;
+    font-weight: var(--font-medium);
+}
 
 /* ----- Footer ----- */
 .app-footer {
