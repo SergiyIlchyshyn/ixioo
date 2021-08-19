@@ -7,10 +7,13 @@
     --bg-light: #ffffff;
     --bg-gray: #efeff4;
     /*===== Text color =====*/
-    --accent: #0a84ff;
+    --accent-blue: #0a84ff;
+    --accent-red: #f92e22;
     --text-primary: #000000;
     --text-secondary: #84858a;
     --text-gray: #8a8a8e;
+    --gradient-blue: linear-gradient(#0a84ff, #4fbaf0);
+    --gradient-red: linear-gradient(#f92e22, #fe756d);
     /*===== Font and typography =====*/
     --Roboto: "Roboto", sans-serif;
     --h1-font-size: 1.625rem;
@@ -43,7 +46,7 @@ body {
     z-index: 1039;
 }
 .app-header__logo a svg {
-    fill: var(--accent);
+    fill: var(--accent-blue);
 }
 .app-header__menu .nav-link {
     padding: 0.5rem 3rem;
@@ -85,11 +88,11 @@ body {
     transition: 0.4s ease;
 }
 .app-main__sidebar .nav-sidebar .nav-link:hover {
-    color: var(--accent);
+    color: var(--accent-blue);
     background-color: var(--bg-gray);
 }
 .app-main__sidebar .nav-sidebar .nav-link.active {
-    color: var(--accent);
+    color: var(--accent-blue);
     background-color: var(--bg-gray);
 }
 /* ----- Main content ----- */
@@ -113,7 +116,7 @@ body {
     letter-spacing: 0.38px;
 }
 .content-header .breadcrumb-item.active {
-    color: var(--accent);
+    color: var(--accent-blue);
 }
 .content-header .breadcrumb-item a {
     color: rgba(60, 60, 67, 0.6);
@@ -164,10 +167,11 @@ body {
     border-radius: 24px;
 }
 .training-data__col h2 {
-    margin: 0;
+    margin: 0 12px;
     font-size: var(--h2-font-size);
     font-weight: var(--font-medium);
     line-height: 1;
+    letter-spacing: 0.38px;
 }
 .training-data__title {
     margin-bottom: 35px;
@@ -209,15 +213,107 @@ body {
 }
 .training-data__grid p.training-data__digits {
     margin-bottom: 12px;
-    background: linear-gradient(#0a84ff, #4fbaf0);
+    background: var(--gradient-blue);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 2.25rem;
 }
 .training-data__grid p.training-data__info {
-    color: var(--accent);
+    color: var(--accent-blue);
     font-size: 0.6875rem;
     font-weight: var(--font-medium);
+}
+.training-data__grid.danger p.training-data__digits {
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.training-data__grid.danger p.training-data__info {
+    color: var(--accent-red);
+}
+.training-data__col .card div {
+    position: relative;
+}
+.training-data__col .card > div:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: #dadada;
+}
+.training-data__col .column-list {
+    width: 340px;
+    padding-right: 35px;
+}
+.training-data__col .column-list ul {
+    padding-top: 24px;
+}
+.training-data__col .column-list .nav-item:not(:last-child) {
+    padding-bottom: 11px;
+}
+.training-data__col .column-list .nav-link {
+    color: var(--text-gray);
+    font-weight: var(--font-medium);
+    line-height: 1;
+    letter-spacing: -0.078px;
+}
+.training-data__col .column-list .nav-link {
+    padding: 0.25rem 0.75rem;
+    border-radius: 10px;
+    color: var(--text-gray);
+    font-weight: var(--font-medium);
+    line-height: 1;
+    letter-spacing: -0.078px;
+    transition: 0.4s ease;
+}
+.training-data__col .column-list .nav-link.active {
+    background-color: var(--bg-sidebar);
+    color: var(--text-primary);
+    font-weight: var(--font-black);
+}
+.training-data__col .column-list .nav-link:hover {
+    background-color: var(--bg-sidebar);
+    color: var(--text-primary);
+    font-weight: var(--font-black);
+}
+.training-data__col .column-meta {
+    width: 522px;
+    padding: 0 35px;
+}
+.training-data__col .column-meta ul {
+    padding-top: 34px;
+}
+.training-data__col .column-meta .list-group-item {
+    padding: 0 1rem 0.75rem 0.5rem;
+    background-color: transparent;
+    border: none;
+    color: var(--text-gray);
+    font-weight: var(--font-medium);
+    letter-spacing: -0.078px;
+}
+.training-data__col .column-meta .list-group-item > span {
+    color: var(--text-primary);
+    font-weight: var(--font-black);
+}
+.training-data__col .column-chart {
+    padding-left: 35px;
+    flex: 1;
+}
+.training-data__col .column-chart__item {
+    padding: 24px;
+    background-color: var(--bg-sidebar);
+    box-shadow: 0px 4px 24px rgba(112, 144, 176, 0.12);
+    border-radius: 24px;
+}
+.training-data__col .column-chart__item .training-data__title {
+    border: none;
+    text-align: center;
+}
+.training-data__col .column-chart__item:not(:last-child) {
+    margin-right: 20px;
 }
 
 /* ----- Footer ----- */
