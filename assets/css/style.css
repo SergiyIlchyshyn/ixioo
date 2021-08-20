@@ -245,7 +245,7 @@ body {
     background-color: #dadada;
 }
 .training-data__col .column-list {
-    width: 340px;
+    width: 320px;
     padding-right: 35px;
 }
 .training-data__col .column-list ul {
@@ -307,6 +307,7 @@ body {
     background-color: var(--bg-sidebar);
     box-shadow: 0px 4px 24px rgba(112, 144, 176, 0.12);
     border-radius: 24px;
+    flex: 1 1 50%;
 }
 .training-data__col .column-chart__item .training-data__title {
     border: none;
@@ -314,6 +315,9 @@ body {
 }
 .training-data__col .column-chart__item:not(:last-child) {
     margin-right: 20px;
+}
+.training-data__col .column-chart__item .apexcharts-canvas {
+    margin: 0 auto;
 }
 .apexcharts-radial-series {
     pointer-events: none;
