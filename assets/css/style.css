@@ -315,6 +315,9 @@ body {
 .training-data__col .column-chart__item:not(:last-child) {
     margin-right: 20px;
 }
+.apexcharts-radial-series {
+    pointer-events: none;
+}
 
 /* ----- Footer ----- */
 .app-footer {
